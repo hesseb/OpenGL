@@ -23,4 +23,6 @@ namespace GLCore::Utils {
 		GLuint m_RendererID;
 	};
 
+	std::string ReadFileAsString(const std::string& filepath);
+
 }

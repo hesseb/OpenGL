@@ -5,7 +5,7 @@
 
 namespace GLCore::Utils {
 
-	static std::string ReadFileAsString(const std::string& filepath)
+	std::string ReadFileAsString(const std::string& filepath)
 	{
 		std::string result;
 		std::ifstream in(filepath, std::ios::in | std::ios::binary);
@@ -64,7 +64,7 @@ namespace GLCore::Utils {
 		shader->LoadFromGLSLTextFiles(vertexShaderPath, fragmentShaderPath);
 		return shader;
 	}
-	
+
 	void Shader::LoadFromGLSLTextFiles(const std::string& vertexShaderPath, const std::string& fragmentShaderPath)
 	{
 		std::string vertexSource = ReadFileAsString(vertexShaderPath);
@@ -72,7 +72,7 @@ namespace GLCore::Utils {
 
 		GLuint program = glCreateProgram();
 		int glShaderIDIndex = 0;
-			
+
 		GLuint vertexShader = CompileShader(GL_VERTEX_SHADER, vertexSource);
 		glAttachShader(program, vertexShader);
 		GLuint fragmentShader = CompileShader(GL_FRAGMENT_SHADER, fragmentSource);
@@ -98,7 +98,7 @@ namespace GLCore::Utils {
 			LOG_ERROR("{0}", infoLog.data());
 			// HZ_CORE_ASSERT(false, "Shader link failure!");
 		}
-		
+
 		glDetachShader(program, vertexShader);
 		glDetachShader(program, fragmentShader);
 		glDeleteShader(vertexShader);

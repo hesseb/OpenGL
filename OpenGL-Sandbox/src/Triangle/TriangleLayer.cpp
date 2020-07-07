@@ -1,4 +1,4 @@
-#include "SandboxLayer.h"
+#include "TriangleLayer.h"
 
 using namespace GLCore;
 using namespace GLCore::Utils;
@@ -110,15 +110,15 @@ static GLuint compileShaders()
 	return program;
 }
 
-SandboxLayer::SandboxLayer()
+TriangleLayer::TriangleLayer()
 {
 }
 
-SandboxLayer::~SandboxLayer()
+TriangleLayer::~TriangleLayer()
 {
 }
 
-void SandboxLayer::OnAttach()
+void TriangleLayer::OnAttach()
 {
 	EnableGLDebugging();
 	// Init here
@@ -131,19 +131,19 @@ void SandboxLayer::OnAttach()
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
 
-void SandboxLayer::OnDetach()
+void TriangleLayer::OnDetach()
 {
 	// Shutdown here
 	glDeleteVertexArrays(1, &m_VAO);
 	glDeleteProgram(m_Program);
 }
 
-void SandboxLayer::OnEvent(Event& event)
+void TriangleLayer::OnEvent(Event& event)
 {
 	// Events here
 }
 
-void SandboxLayer::OnUpdate(Timestep ts)
+void TriangleLayer::OnUpdate(Timestep ts)
 {
 	// Render here
 
@@ -170,7 +170,7 @@ void SandboxLayer::OnUpdate(Timestep ts)
 	glDrawArrays(GL_PATCHES, 0, 3);
 }
 
-void SandboxLayer::OnImGuiRender()
+void TriangleLayer::OnImGuiRender()
 {
 	// ImGui here
 }

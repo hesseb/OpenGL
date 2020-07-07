@@ -1,6 +1,5 @@
 #include "GLCore.h"
 #include "SandboxLayer.h"
-#include "Triangle/TriangleLayer.h"
 
 using namespace GLCore;
 
@@ -10,7 +9,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new SandboxLayer());
-		//PushLayer(new TriangleLayer());
 	}
 };
 

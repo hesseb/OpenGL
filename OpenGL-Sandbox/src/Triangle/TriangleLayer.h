@@ -3,11 +3,11 @@
 #include <GLCore.h>
 #include <GLCoreUtils.h>
 
-class SandboxLayer : public GLCore::Layer
+class TriangleLayer : public GLCore::Layer
 {
 public:
-	SandboxLayer();
-	virtual ~SandboxLayer();
+	TriangleLayer();
+	virtual ~TriangleLayer();
 
 	virtual void OnAttach() override;
 	virtual void OnDetach() override;

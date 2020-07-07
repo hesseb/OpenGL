@@ -15,7 +15,4 @@ public:
 	virtual void OnUpdate(GLCore::Timestep ts) override;
 	virtual void OnImGuiRender() override;
 private:
-
-	GLuint m_Program;
-	GLuint m_VAO;
 };

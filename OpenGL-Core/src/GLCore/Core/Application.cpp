@@ -5,7 +5,7 @@
 
 #include "Input.h"
 
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 namespace GLCore {
 
@@ -81,5 +81,4 @@ namespace GLCore {
 		m_Running = false;
 		return true;
 	}
-
 }
